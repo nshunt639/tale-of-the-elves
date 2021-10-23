@@ -17,7 +17,7 @@ const Home = () => {
                     <Container maxWidth="lg">
                         <Box>
                             <Typography variant="h1">
-                                Tale of The Elves
+                                Tale Of The Elves
                                 <br />
                                 Best Ever Collection in the world
                             </Typography>

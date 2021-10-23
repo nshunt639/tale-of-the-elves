@@ -8,9 +8,9 @@ const Footer = () => {
     return (
         <Container maxWidth="lg">
             <Box className={classes.root} textAlign="center">
-                <img src="/images/logo.png" alt="Tale of The Elves" />
+                <img src="/images/logo.png" alt="Tale Of The Elves" />
                 <Typography variant="subtitle2">
-                    Copyright © Tale of The Elves 2021. All rights reserved
+                    Copyright © Tale Of The Elves 2021. All rights reserved
                 </Typography>
                 <Box marginTop={2}>
                     <IconButton href="https://discord.gg/pfl">

@@ -7,7 +7,7 @@ const Logo = () => {
 
     return (
         <RouterLink to="/" className={classes.logoLink}>
-            <img className={classes.logoImage} src="/images/logo.png" alt="Tale of The Elves" />
+            <img className={classes.logoImage} src="/images/logo.png" alt="Tale Of The Elves" />
         </RouterLink>
     )
 }
