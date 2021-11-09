@@ -7,7 +7,7 @@ const TeamMember = ({image, name, title, ...props}) => {
     return (
         <Box className={classes.root} {...props}>
             <Box>
-                <img src={image} alt={title} className={classes.image} />
+                <img src={image} alt={title} className={`${classes.image} w-full`} />
             </Box>
             {/* <Box className={classes.textContainer}>
                 <Box marginTop={4}>

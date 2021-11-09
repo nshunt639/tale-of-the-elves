@@ -1,5 +1,7 @@
-import {Box, Container, Grid} from '@material-ui/core'
+import {Box, Container, Grid, Typography} from '@material-ui/core'
 import TeamMember from 'components/TeamMember'
+
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import useStyles from './OurTeam.styles'
 
@@ -15,17 +17,32 @@ const OurTeam = () => {
     const classes = useStyles()
 
     return (
-        <Container maxWidth="md">
-            <Box className={classes.root}>
-                <Grid container spacing={3}>
-                    {TEAM_MEMBERS.map((member, i) => (
-                        <Grid key={`team-member-${i}`} item xs={12} sm={4}>
-                            <TeamMember {...member} />
+        <Box className={classes.root}>
+            <ScrollAnimation animateIn="fadeInDown" offset={400} animateOnce={true}>
+                <Typography variant="h2">The Team</Typography>
+            </ScrollAnimation>
+            <Box marginTop={1}>
+                <Container maxWidth="md">
+                    <Box className={classes.members}>
+                        <Grid container spacing={3}>
+                            {TEAM_MEMBERS.map((member, i) => (
+                                <Grid key={`team-member-${i}`} item xs={12} sm={4}>
+                                    <ScrollAnimation
+                                        animateIn="bounceIn"
+                                        duration={3}
+                                        delay={1}
+                                        offset={300}
+                                        animateOnce={true}
+                                    >
+                                        <TeamMember {...member} />
+                                    </ScrollAnimation>
+                                </Grid>
+                            ))}
                         </Grid>
-                    ))}
-                </Grid>
+                    </Box>
+                </Container>
             </Box>
-        </Container>
+        </Box>
     )
 }
 

@@ -7,7 +7,7 @@ const Elf = ({image, title, description, ...props}) => {
     return (
         <Box className={classes.root} {...props}>
             <Box>
-                <img src={image} alt={title} className={classes.image} />
+                <img src={image} alt={title} className={`${classes.image} w-full`} />
             </Box>
         </Box>
     )

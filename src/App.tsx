@@ -3,6 +3,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import {ThemeProvider} from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './theme'
+import "animate.css/animate.min.css";
 
 import {SnackbarProvider} from 'context'
 import Snackbar from 'components/shared/Snackbar'

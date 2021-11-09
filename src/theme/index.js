@@ -30,7 +30,9 @@ const theme = createTheme({
                     '-moz-osx-font-smoothing': 'grayscale',
                     'scroll-behavior': 'smooth'
                 },
-                body: {}
+                body: {
+                    'overflow-x': 'hidden'
+                }
             }
         },
         MuiContainer: {

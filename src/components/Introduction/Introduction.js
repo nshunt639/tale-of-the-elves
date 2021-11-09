@@ -1,11 +1,9 @@
-import {
-    Box,
-    Container,
-    Grid,
-    Typography
-} from '@material-ui/core'
-import useStyles from './Introduction.styles'
+import {Box, Container, Grid, Typography} from '@material-ui/core'
 import Elf from 'components/Elf'
+
+import ScrollAnimation from 'react-animate-on-scroll'
+
+import useStyles from './Introduction.styles'
 
 const ELVES = [
     {title: 'Elf 1', image: '/images/elves/1.gif'},
@@ -19,27 +17,48 @@ const Introduction = () => {
         <Box className={classes.root}>
             <Box>
                 <Container maxWidth="md">
-                    <Typography variant="h2">The Tale of the Elves, has just begun...</Typography>
+                    <ScrollAnimation animateIn="fadeInDown" offset={400} animateOnce={true}>
+                        <Typography variant="h2">
+                            The Tale of the Elves, has just begun...
+                        </Typography>
+                    </ScrollAnimation>
                 </Container>
             </Box>
             <Box marginTop={4}>
                 <Grid container spacing={0}>
                     {ELVES.map((elf, i) => (
                         <Grid key={`elf-${i}`} item xs={12} sm={4}>
-                            <Elf image={elf.image} title={elf.title} />
+                            <ScrollAnimation
+                                animateIn="bounceIn"
+                                duration={3}
+                                delay={1}
+                                offset={300}
+                                animateOnce={true}
+                            >
+                                <Elf image={elf.image} title={elf.title} />
+                            </ScrollAnimation>
                         </Grid>
                     ))}
                 </Grid>
             </Box>
             <Box marginTop={4}>
                 <Container maxWidth="md">
-                    <Typography variant="h2">
-                        7,777 Elves are being turned into NFT's.
-                        <br />
-                        Follow our hero's journey, as he defeats the evil who took over Chrismas.
-                        <br />
-                        Save the Elves!
-                    </Typography>
+                    <ScrollAnimation
+                        animateIn="fadeInUp"
+                        duration={1.5}
+                        offset={300}
+                        delay={1000}
+                        animateOnce={true}
+                    >
+                        <Typography variant="h2">
+                            7,777 Elves are being turned into NFT's.
+                            <br />
+                            Follow our hero's journey, as he defeats the evil who took over
+                            Chrismas.
+                            <br />
+                            Save the Elves!
+                        </Typography>
+                    </ScrollAnimation>
                 </Container>
             </Box>
         </Box>

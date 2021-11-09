@@ -19,7 +19,6 @@ const useStyles = makeStyles(theme => ({
     },
     toolbar: {
         transition: 'all 0.5s',
-        flexDirection: 'column',
         float: 'right',
         paddingTop: theme.spacing(4),
         // width: 'auto',
@@ -41,7 +40,7 @@ const useStyles = makeStyles(theme => ({
         //     paddingRight: theme.spacing(8)
         // },
         '&.small': {
-            paddingTop: theme.spacing(0),
+            paddingTop: theme.spacing(2),
             // flexDirection: 'row',
             // width: '100%',
             // [theme.breakpoints.down('sm')]: {
@@ -49,26 +48,22 @@ const useStyles = makeStyles(theme => ({
             // },
             [theme.breakpoints.up('sm')]: {
                 height: theme.spacing(20),
-                filter: 'drop-shadow(0 0 10px #8B9BB4)',
+                filter: 'drop-shadow(0 0 10px #8B9BB4)'
             }
-        },
+        }
+    },
+    toolbarInner: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
     },
     container: {
-        height: '100%',
+        height: '100%'
     },
-    // navBar: {
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     transition: 'all 0.5s',
-    //     // [theme.breakpoints.up('md')]: {
-    //     //     marginTop: theme.spacing(-5)
-    //     // },
-    //     '&.small': {
-    //         [theme.breakpoints.up('md')]: {
-    //             marginTop: 0
-    //         }
-    //     }
-    // },
+    navBar: {
+        textAlign: 'center'
+    }
     // topMenu: {},
     // profile: {
     //     display: 'flex',

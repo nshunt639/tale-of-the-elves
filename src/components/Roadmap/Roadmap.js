@@ -1,13 +1,7 @@
-import {
-    Box,
-    Container,
-    Grid,
-    List,
-    ListItem,
-    ListItemAvatar,
-    ListItemText,
-    Typography
-} from '@material-ui/core'
+import {Box, List, ListItem, ListItemAvatar, ListItemText, Typography} from '@material-ui/core'
+
+import ScrollAnimation from 'react-animate-on-scroll'
+
 import useStyles from './Roadmap.styles'
 
 const ROADMAP_ITEMS = [
@@ -21,35 +15,44 @@ const Roadmap = () => {
     const classes = useStyles()
 
     return (
-        <Box className={classes.root}>
-            <img className={classes.background} src="/images/RoadMapBlank.gif" alt="Roadmap" />
-            <Box className={classes.content} textAlign="left">
-                <Box className={classes.contentInner}>
-                    <Box textAlign="center">
-                        <Typography variant="h3" className={classes.title}>
-                            Project S.O.C.
-                        </Typography>
-                        <Typography variant="h4" className={classes.title2}>
-                            <small>(Roadmap)</small>
-                        </Typography>
-                    </Box>
-                    <Box>
-                        <List className={classes.roadmapItems}>
-                            {ROADMAP_ITEMS.map((item, i) => (
-                                <ListItem key={`roadmap-item-${i}`} className={classes.roadmapItem}>
-                                    <ListItemAvatar>
-                                        <Typography variant="body1">{i + 1})</Typography>
-                                    </ListItemAvatar>
-                                    <ListItemText>
-                                        <Typography variant="body1">{item}</Typography>
-                                    </ListItemText>
-                                </ListItem>
-                            ))}
-                        </List>
+        <ScrollAnimation animateIn="fadeIn" duration={3} offset={400} animateOnce={true}>
+            <Box className={classes.root}>
+                <img className={`${classes.background} w-full`} src="/images/RoadMapBlank.gif" alt="Roadmap" />
+                <Box className={classes.content} textAlign="left">
+                    <Box className={classes.contentInner}>
+                        <ScrollAnimation animateIn="bounceInDown" offset={400} animateOnce={true}>
+                            <Box textAlign="center">
+                                <Typography variant="h3" className={classes.title}>
+                                    Project S.O.C.
+                                </Typography>
+                                <Typography variant="h4" className={classes.title2}>
+                                    <small>(Roadmap)</small>
+                                </Typography>
+                            </Box>
+                            </ScrollAnimation>
+                            <ScrollAnimation animateIn="fadeInUp" offset={400} animateOnce={true}>
+                            <Box>
+                                <List className={classes.roadmapItems}>
+                                    {ROADMAP_ITEMS.map((item, i) => (
+                                        <ListItem
+                                            key={`roadmap-item-${i}`}
+                                            className={classes.roadmapItem}
+                                        >
+                                            <ListItemAvatar>
+                                                <Typography variant="body1">{i + 1})</Typography>
+                                            </ListItemAvatar>
+                                            <ListItemText>
+                                                <Typography variant="body1">{item}</Typography>
+                                            </ListItemText>
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </Box>
+                        </ScrollAnimation>
                     </Box>
                 </Box>
             </Box>
-        </Box>
+        </ScrollAnimation>
     )
 }
 

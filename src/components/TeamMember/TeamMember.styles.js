@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme => ({
         paddingRight: theme.spacing(2)
     },
     image: {
-        width: '100%',
     }
 }))
 
