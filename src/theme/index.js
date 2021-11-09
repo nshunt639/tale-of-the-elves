@@ -5,23 +5,19 @@ const theme = createTheme({
     palette: {
         type: 'dark',
         primary: {
-            main: '#E84393',
-            contrastText: '#fff'
+            main: '#fff',
+            contrastText: '#000'
         },
         secondary: {
-            main: '#D2DAE4',
+            main: '#000',
             contrastText: '#fff'
         },
-        background: {
-            default: '#161127'
-        },
         text: {
-            primary: '#D2DAE4',
-            secondary: '#E84393'
+            primary: '#fff',
+            secondary: '#000'
         }
     },
-    shape: {
-    },
+    shape: {},
     typography,
     overrides: {
         MuiCssBaseline: {
@@ -34,9 +30,16 @@ const theme = createTheme({
                     '-moz-osx-font-smoothing': 'grayscale',
                     'scroll-behavior': 'smooth'
                 },
-                body: {
-                }
+                body: {}
             }
+        },
+        MuiContainer: {
+            root: {
+                paddingLeft: 0,
+                paddingRight: 0
+            },
+            paddingLeft: 0,
+            paddingRight: 0
         }
     }
 })

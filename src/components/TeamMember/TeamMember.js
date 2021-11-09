@@ -9,14 +9,14 @@ const TeamMember = ({image, name, title, ...props}) => {
             <Box>
                 <img src={image} alt={title} className={classes.image} />
             </Box>
-            <Box className={classes.textContainer}>
+            {/* <Box className={classes.textContainer}>
                 <Box marginTop={4}>
                     <Typography variant="h3">{name}</Typography>
                 </Box>
                 <Box marginTop={2}>
                     <Typography variant="body1">{title}</Typography>
                 </Box>
-            </Box>
+            </Box> */}
         </Box>
     )
 }

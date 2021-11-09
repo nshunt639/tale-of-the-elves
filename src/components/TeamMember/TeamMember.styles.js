@@ -8,7 +8,6 @@ const useStyles = makeStyles(theme => ({
     },
     image: {
         width: '100%',
-        borderRadius: 10
     }
 }))
 

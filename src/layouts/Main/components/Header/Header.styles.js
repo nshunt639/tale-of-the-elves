@@ -2,11 +2,15 @@ import {makeStyles} from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
     appBar: {
-        transition: 'background, height 0.5s',
-        background: '#211439f0',
-        boxShadow: '0 0 4px rgba(0, 0, 0, .5)',
+        // transition: 'background, height 0.5s',
+        // background: '#211439f0',
+        // boxShadow: '0 0 4px rgba(0, 0, 0, .5)',
+        // position: 'absolute',
         zIndex: theme.zIndex.drawer + 1,
 
+        // '&.small': {
+        //     position: 'fixed',
+        // },
         '&.light': {
             background: 'transparent',
             boxShadow: 'none'
@@ -15,44 +19,62 @@ const useStyles = makeStyles(theme => ({
     },
     toolbar: {
         transition: 'all 0.5s',
-        [theme.breakpoints.down('sm')]: {
-            height: theme.spacing(7)
+        flexDirection: 'column',
+        float: 'right',
+        paddingTop: theme.spacing(4),
+        // width: 'auto',
+        // [theme.breakpoints.down('sm')]: {
+        //     height: theme.spacing(7)
+        // },
+        height: theme.spacing(15),
+        [theme.breakpoints.up('sm')]: {
+            height: theme.spacing(25)
         },
         [theme.breakpoints.up('md')]: {
-            height: theme.spacing(16)
+            height: theme.spacing(35)
         },
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: theme.spacing(8),
-            paddingRight: theme.spacing(8)
+            height: theme.spacing(40)
         },
-        '&.small': {
-            [theme.breakpoints.down('sm')]: {
-                height: theme.spacing(7)
-            },
-            [theme.breakpoints.up('md')]: {
-                height: theme.spacing(10)
-            }
-        }
-    },
-    navBar: {
-        display: 'flex',
-        alignItems: 'center',
-        transition: 'all 0.5s',
-        // [theme.breakpoints.up('md')]: {
-        //     marginTop: theme.spacing(-5)
+        // [theme.breakpoints.up('lg')]: {
+        //     paddingLeft: theme.spacing(8),
+        //     paddingRight: theme.spacing(8)
         // },
         '&.small': {
-            [theme.breakpoints.up('md')]: {
-                marginTop: 0
+            paddingTop: theme.spacing(0),
+            // flexDirection: 'row',
+            // width: '100%',
+            // [theme.breakpoints.down('sm')]: {
+            //     height: theme.spacing(7)
+            // },
+            [theme.breakpoints.up('sm')]: {
+                height: theme.spacing(20),
+                filter: 'drop-shadow(0 0 10px #8B9BB4)',
             }
-        }
+        },
     },
-    topMenu: {},
-    profile: {
-        display: 'flex',
-        alignItems: 'center',
-        marginLeft: theme.spacing(4)
-    }
+    container: {
+        height: '100%',
+    },
+    // navBar: {
+    //     display: 'flex',
+    //     alignItems: 'center',
+    //     transition: 'all 0.5s',
+    //     // [theme.breakpoints.up('md')]: {
+    //     //     marginTop: theme.spacing(-5)
+    //     // },
+    //     '&.small': {
+    //         [theme.breakpoints.up('md')]: {
+    //             marginTop: 0
+    //         }
+    //     }
+    // },
+    // topMenu: {},
+    // profile: {
+    //     display: 'flex',
+    //     alignItems: 'center',
+    //     marginLeft: theme.spacing(4)
+    // }
 }))
 
 export default useStyles
