@@ -17,7 +17,7 @@ const Introduction = () => {
         <Box className={classes.root}>
             <Box>
                 <Container maxWidth="md">
-                    <ScrollAnimation animateIn="fadeInDown" offset={400}>
+                    <ScrollAnimation animateIn="fadeInDown" offset={200}>
                         <Typography variant="h2">
                             The Tale of the Elves, has just begun...
                         </Typography>
@@ -31,8 +31,7 @@ const Introduction = () => {
                             <ScrollAnimation
                                 animateIn="bounceIn"
                                 duration={3}
-                                delay={1000}
-                                offset={300}
+                                offset={200}
                             >
                                 <Elf image={elf.image} title={elf.title} />
                             </ScrollAnimation>
@@ -45,8 +44,7 @@ const Introduction = () => {
                     <ScrollAnimation
                         animateIn="fadeInUp"
                         duration={1.5}
-                        offset={300}
-                        delay={1000}
+                        offset={200}
                     >
                         <Typography variant="h2">
                             7,777 Elves are being turned into NFT's.

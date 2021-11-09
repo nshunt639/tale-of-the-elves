@@ -18,7 +18,7 @@ const OurTeam = () => {
 
     return (
         <Box className={classes.root}>
-            <ScrollAnimation animateIn="fadeInDown" offset={400}>
+            <ScrollAnimation animateIn="fadeInDown" offset={300}>
                 <Typography variant="h2">The Team</Typography>
             </ScrollAnimation>
             <Box marginTop={1}>
