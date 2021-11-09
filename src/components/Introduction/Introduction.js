@@ -36,7 +36,7 @@ const Introduction = () => {
                     <Typography variant="h2">
                         7,777 Elves are being turned into NFT's.
                         <br />
-                        Follow our hero's journey, as he defeats the evil who look over Chrismas.
+                        Follow our hero's journey, as he defeats the evil who took over Chrismas.
                         <br />
                         Save the Elves!
                     </Typography>
