@@ -18,7 +18,7 @@ const OurTeam = () => {
 
     return (
         <Box className={classes.root}>
-            <ScrollAnimation animateIn="fadeInDown" offset={400} animateOnce={true}>
+            <ScrollAnimation animateIn="fadeInDown" offset={400}>
                 <Typography variant="h2">The Team</Typography>
             </ScrollAnimation>
             <Box marginTop={1}>
@@ -32,7 +32,7 @@ const OurTeam = () => {
                                         duration={3}
                                         delay={1}
                                         offset={300}
-                                        animateOnce={true}
+                                        
                                     >
                                         <TeamMember {...member} />
                                     </ScrollAnimation>

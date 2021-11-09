@@ -15,12 +15,12 @@ const Roadmap = () => {
     const classes = useStyles()
 
     return (
-        <ScrollAnimation animateIn="fadeIn" duration={3} offset={400} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" duration={3} offset={400}>
             <Box className={classes.root}>
                 <img className={`${classes.background} w-full`} src="/images/RoadMapBlank.gif" alt="Roadmap" />
                 <Box className={classes.content} textAlign="left">
                     <Box className={classes.contentInner}>
-                        <ScrollAnimation animateIn="bounceInDown" offset={400} animateOnce={true}>
+                        <ScrollAnimation animateIn="bounceInDown" offset={300}>
                             <Box textAlign="center">
                                 <Typography variant="h3" className={classes.title}>
                                     Project S.O.C.
@@ -30,7 +30,7 @@ const Roadmap = () => {
                                 </Typography>
                             </Box>
                             </ScrollAnimation>
-                            <ScrollAnimation animateIn="fadeInUp" offset={400} animateOnce={true}>
+                            <ScrollAnimation animateIn="fadeInUp" offset={300}>
                             <Box>
                                 <List className={classes.roadmapItems}>
                                     {ROADMAP_ITEMS.map((item, i) => (
