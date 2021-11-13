@@ -6,6 +6,7 @@ import Roadmap from 'components/Roadmap'
 import OurTeam from 'components/OurTeam'
 
 import useStyles from './Home.styles'
+import Faq from 'components/Faq'
 
 const Home = () => {
     const classes = useStyles()
@@ -29,6 +30,9 @@ const Home = () => {
                 </Box>
                 <Box className={classes.section} id="team" textAlign="center">
                     <OurTeam />
+                </Box>
+                <Box className={classes.section} id="fag" textAlign="center">
+                    <Faq />
                 </Box>
             </Box>
         </Container>
