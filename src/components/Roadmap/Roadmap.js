@@ -10,10 +10,10 @@ import React from 'react'
 
 const ROADMAP_ITEMS = [
     'Launch all 7777 unique elves to our community',
-    'Charitable donation to Topys For Tots',
-    'TOTOE Merch',
+    'Charitable donation to Toys For Tots',
+    'TOTE Merch',
     'Secondary marketplace integration',
-    'Scaling of Tale Of The Elves by providing quality utility(Metaverse, VR and AR integration)'
+    'Scaling of Tale Of The Elves by providing quality utility (Metaverse, VR and AR integration)'
 ]
 
 const RoadMapItemList = ({classes}) => {
