@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 
 import ScrollAnimation from 'react-animate-on-scroll'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import useStyles from './Faq.styles'
 
@@ -41,14 +42,13 @@ const Faq = () => {
 
     return (
         <Box className={classes.root}>
-            <ScrollAnimation animateIn="fadeIn">
                 <Typography variant="h2">FAQ</Typography>
                 <Box marginTop={4} textAlign="left">
                     <Container maxWidth="md">
                         {FAQ_DATA.map(([question, answer], i) => (
                             <Accordion>
                                 <AccordionSummary
-                                // expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon />}
                                 // aria-controls="panel1bh-content"
                                 // id="panel1bh-header"
                                 >
@@ -67,7 +67,6 @@ const Faq = () => {
                         ))}
                     </Container>
                 </Box>
-            </ScrollAnimation>
         </Box>
     )
 }
