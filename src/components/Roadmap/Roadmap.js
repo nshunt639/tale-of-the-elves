@@ -60,7 +60,6 @@ const Roadmap = () => {
     }
 
     return (
-        <ScrollAnimation animateIn="fadeIn" duration={3} offset={400}>
             <Box className={classes.root}>
                 <img
                     className={`${classes.background} w-full`}
@@ -69,7 +68,6 @@ const Roadmap = () => {
                 />
                 <Box className={classes.content} textAlign="left">
                     <Box className={classes.contentInner}>
-                        <ScrollAnimation animateIn="bounceInDown" offset={300}>
                             <Box textAlign="center">
                                 <Typography variant="h3" className={classes.title}>
                                     Project S.O.C.
@@ -78,23 +76,12 @@ const Roadmap = () => {
                                     <small>(Roadmap)</small>
                                 </Typography>
                             </Box>
-                        </ScrollAnimation>
-                        <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeInUp"
-                            offset={300}
-                            afterAnimatedIn={writeRoadmapItemList}
-                            afterAnimatedOut={removeRoadmapItemList}
-                        >
-                            <Box id="roadmap-item-list" style={{display: 'none'}}></Box>
-                            <Box id="roadmap-item-list-hidden" style={{display: 'none'}}>
+                            <Box id="roadmap-item-list">
                                 <RoadMapItemList classes={classes} />
                             </Box>
-                        </ScrollAnimation>
                     </Box>
                 </Box>
             </Box>
-        </ScrollAnimation>
     )
 }
 

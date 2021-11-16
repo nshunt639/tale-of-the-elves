@@ -35,13 +35,6 @@ const Header = () => {
         >
             <Container className={classes.container} maxWidth="lg">
                 <Toolbar className={withSmallStyles(classes.toolbar)}>
-                    <ScrollAnimation
-                        offset={0}
-                        duration={1}
-                        animateIn="slideInDown"
-                        animateOnce={true}
-                        style={{height: '100%'}}
-                    >
                         <Box className={classes.toolbarInner}>
                             <Logo />
 
@@ -67,7 +60,6 @@ const Header = () => {
                                 </Box>
                             </Box>
                         </Box>
-                    </ScrollAnimation>
                 </Toolbar>
             </Container>
         </AppBar>

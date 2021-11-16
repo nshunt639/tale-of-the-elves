@@ -18,24 +18,14 @@ const OurTeam = () => {
 
     return (
         <Box className={classes.root}>
-            <ScrollAnimation animateIn="fadeInDown" offset={300}>
                 <Typography variant="h2">The Team</Typography>
-            </ScrollAnimation>
             <Box marginTop={1}>
                 <Container maxWidth="md">
                     <Box className={classes.members}>
                         <Grid container spacing={3}>
                             {TEAM_MEMBERS.map((member, i) => (
                                 <Grid key={`team-member-${i}`} item xs={12} sm={4}>
-                                    <ScrollAnimation
-                                        animateIn="bounceIn"
-                                        duration={3}
-                                        delay={1}
-                                        offset={300}
-                                        
-                                    >
                                         <TeamMember {...member} />
-                                    </ScrollAnimation>
                                 </Grid>
                             ))}
                         </Grid>
