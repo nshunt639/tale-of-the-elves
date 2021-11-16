@@ -46,7 +46,7 @@ const Faq = () => {
                 <Box marginTop={4} textAlign="left">
                     <Container maxWidth="md">
                         {FAQ_DATA.map(([question, answer], i) => (
-                            <Accordion expanded>
+                            <Accordion>
                                 <AccordionSummary
                                 // expandIcon={<ExpandMoreIcon />}
                                 // aria-controls="panel1bh-content"
